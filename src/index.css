@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme {
+  --color-plum: #5B1A3A;
+  --color-mulberry: #7A2450;
+  --color-marigold: #E0A526;
+  --color-terracotta: #C4623F;
+  --color-ivory: #FBF6EF;
+  --color-espresso: #2B1B17;
+  --color-cocoa: #6B5750;
+  --color-sand: #E8DCCF;
+  --color-sage: #3F7D5C;
+  --color-amber: #B7791F;
+  --color-brick: #B3382C;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* ── Base styles ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-espresso);
+  background-color: var(--color-ivory);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ── Focus ring (marigold, accessible) ── */
+*:focus-visible {
+  outline: 2px solid var(--color-marigold);
+  outline-offset: 2px;
+}
+
+/* ── Respect reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Print styles for Brief export ── */
+@media print {
+  nav, footer, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+  .print-break {
+    page-break-before: always;
+  }
+}
+
+/* ── Utility classes ── */
+.container-app {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

@@ -1,0 +1,27 @@
+# Render Blueprint for HueMatch Bridal
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  # Static Site Deployment (Recommended for Render — 100% free)
+  - type: web
+    name: huematch-bridal
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false

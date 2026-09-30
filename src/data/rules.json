@@ -1,0 +1,242 @@
+{
+  "fair-cool": {
+    "label": "Fair, cool undertone",
+    "foundation": "Look for shades with pink or neutral bases. Avoid yellow-heavy or orange-toned foundations.",
+    "shadeRange": "Monk 1-2",
+    "correctors": "Light peach corrector for under-eye circles. Green corrector for redness.",
+    "blush": ["Soft pink", "Mauve", "Cool rose"],
+    "lips": ["Berry pink", "Rosy nude", "Soft plum", "Cool mauve"],
+    "highlighter": ["Pearl", "Icy pink", "Silver shimmer"],
+    "techniques": [
+      "Blend foundation down the neck for a seamless match",
+      "Use a light hand with bronzer to avoid warmth clash",
+      "Set with a finely milled translucent powder"
+    ],
+    "avoid": ["Orange-toned bronzers", "Yellow-based foundations", "Heavy contouring with warm shades"]
+  },
+  "fair-neutral": {
+    "label": "Fair, neutral undertone",
+    "foundation": "Choose shades that balance pink and yellow. Test on jawline in natural light.",
+    "shadeRange": "Monk 1-3",
+    "correctors": "Peach or bisque corrector for under-eye darkness.",
+    "blush": ["Soft peach", "Dusty rose", "Light apricot"],
+    "lips": ["Nude pink", "Soft coral", "Rose", "Warm nude"],
+    "highlighter": ["Champagne", "Soft gold", "Pearl"],
+    "techniques": [
+      "Your neutral base works with both warm and cool shades",
+      "Layer a light cream blush under powder for longevity",
+      "Use a damp sponge for the most natural finish"
+    ],
+    "avoid": ["Foundations that are too pink or too yellow", "Overly shimmery all-over products", "Ashy contour shades"]
+  },
+  "fair-warm": {
+    "label": "Fair, warm undertone",
+    "foundation": "Look for shades with golden or peachy bases. Avoid pink-toned foundations.",
+    "shadeRange": "Monk 2-3",
+    "correctors": "Peach corrector for dark circles. Yellow corrector for redness.",
+    "blush": ["Warm peach", "Coral", "Apricot"],
+    "lips": ["Warm nude", "Peach", "Soft coral", "Warm terracotta"],
+    "highlighter": ["Gold", "Warm champagne", "Peach shimmer"],
+    "techniques": [
+      "Warm-toned bronzer enhances your natural glow beautifully",
+      "Apply blush on the apples of cheeks and blend upward",
+      "A golden setting spray adds luminosity"
+    ],
+    "avoid": ["Cool pink blushes", "Silver-toned highlighters", "Mauve lipsticks that wash you out"]
+  },
+  "fair-olive": {
+    "label": "Fair, olive undertone",
+    "foundation": "Look for shades with yellow-green or olive bases. Most foundations lean too pink or too yellow.",
+    "shadeRange": "Monk 2-3",
+    "correctors": "Peach or salmon corrector for darkness. A touch of lavender can brighten.",
+    "blush": ["Warm rose", "Soft terracotta", "Muted peach"],
+    "lips": ["Dusty rose", "Warm mauve", "Muted berry", "Nude with brown base"],
+    "highlighter": ["Gold", "Warm bronze", "Champagne"],
+    "techniques": [
+      "Mix a green-toned adjuster into foundations that lean too pink",
+      "Warm blush shades complement olive skin better than cool pinks",
+      "Avoid ashiness by warming up the neck match too"
+    ],
+    "avoid": ["Pink-based foundations", "Cool-toned concealers", "Pastel lip shades that look grey"]
+  },
+  "light-medium-cool": {
+    "label": "Light-medium, cool undertone",
+    "foundation": "Choose shades with pink or rosy bases. Avoid golden foundations that turn orange.",
+    "shadeRange": "Monk 4-5",
+    "correctors": "Peach-to-salmon corrector for under-eye circles, depending on depth.",
+    "blush": ["Rosy pink", "Plum", "Cool berry"],
+    "lips": ["Raspberry", "Rose", "Plum pink", "Cool red"],
+    "highlighter": ["Pink pearl", "Icy lavender", "Silver rose"],
+    "techniques": [
+      "Cool-toned contour shades work best for structure",
+      "Layer cream and powder blush for wedding-day longevity",
+      "Flash test your SPF products; some cause flashback in photos"
+    ],
+    "avoid": ["Orange bronzers", "Warm golden highlighters", "Yellow-toned setting powders"]
+  },
+  "light-medium-neutral": {
+    "label": "Light-medium, neutral undertone",
+    "foundation": "Balanced shades that are neither too pink nor too golden. Test on jawline.",
+    "shadeRange": "Monk 4-5",
+    "correctors": "Peach corrector for under-eye area. Neutral-toned concealer for spots.",
+    "blush": ["Dusty pink", "Warm rose", "Soft mauve"],
+    "lips": ["Nude rose", "Soft berry", "Warm pink", "Muted coral"],
+    "highlighter": ["Champagne", "Soft gold", "Pink gold"],
+    "techniques": [
+      "Your balanced undertone lets you wear both warm and cool cheek shades",
+      "Use a hydrating primer for a dewy bridal glow",
+      "Set the T-zone only to keep radiance on the cheeks"
+    ],
+    "avoid": ["Overly ashy contour shades", "Extremely warm or cool foundations", "Heavy matte finishes all over"]
+  },
+  "light-medium-warm": {
+    "label": "Light-medium, warm undertone",
+    "foundation": "Golden or honey-toned bases. Avoid pink foundations that look chalky.",
+    "shadeRange": "Monk 4-5",
+    "correctors": "Orange-peach corrector for dark circles. Yellow corrector for redness.",
+    "blush": ["Warm coral", "Golden peach", "Terracotta"],
+    "lips": ["Warm nude", "Burnt coral", "Terracotta rose", "Warm red"],
+    "highlighter": ["Rich gold", "Warm bronze", "Copper"],
+    "techniques": [
+      "Warm bronzer across the cheekbones adds natural dimension",
+      "Match the neck carefully; golden skin can look mismatched easily",
+      "Use cream products for a skin-like finish on warm tones"
+    ],
+    "avoid": ["Cool pink blushes", "Mauve lipsticks that look grey", "Silver or icy highlighters"]
+  },
+  "light-medium-olive": {
+    "label": "Light-medium, olive undertone",
+    "foundation": "Olive or yellow-green undertoned bases. Standard warm or neutral shades often look off.",
+    "shadeRange": "Monk 4-5",
+    "correctors": "Salmon or orange corrector for darkness. Mix a green adjuster if foundation leans pink.",
+    "blush": ["Terracotta", "Warm rose", "Bronzy peach"],
+    "lips": ["Warm nude", "Dusty rose", "Berry", "Warm brown-red"],
+    "highlighter": ["Bronze", "Warm gold", "Copper champagne"],
+    "techniques": [
+      "Add a drop of olive mixer to your foundation for the perfect base",
+      "Earth-toned eyeshadows harmonise beautifully with olive skin",
+      "Avoid grey-toned contour; use warm-neutral instead"
+    ],
+    "avoid": ["Pink-toned foundations", "Cool pastel lip colours", "Ashy powder products"]
+  },
+  "tan-cool": {
+    "label": "Tan, cool undertone",
+    "foundation": "Look for red-brown or neutral-cool bases. Avoid overly golden shades.",
+    "shadeRange": "Monk 6-7",
+    "correctors": "Orange corrector for dark circles. Avoid peach, which can look ashy.",
+    "blush": ["Deep rose", "Berry", "Plum"],
+    "lips": ["Wine", "Deep berry", "Cool red", "Plum"],
+    "highlighter": ["Rose gold", "Pink pearl", "Cool bronze"],
+    "techniques": [
+      "Test foundation on jawline and neck together in natural daylight",
+      "Use a deep translucent powder to avoid white cast",
+      "Cool berry shades on lips photograph beautifully"
+    ],
+    "avoid": ["Golden foundations that turn orange", "Light peach correctors", "White-cast setting powders"]
+  },
+  "tan-neutral": {
+    "label": "Tan, neutral undertone",
+    "foundation": "Balanced warm-neutral shades. Test both warm and cool options to find the best match.",
+    "shadeRange": "Monk 6-7",
+    "correctors": "Orange corrector for under-eye darkness. Layer with a neutral concealer.",
+    "blush": ["Warm berry", "Dusty rose", "Coral"],
+    "lips": ["Warm nude", "Berry", "Brick red", "Mauve"],
+    "highlighter": ["Gold", "Rose gold", "Warm bronze"],
+    "techniques": [
+      "Neutral undertones can pull off both warm and cool lip shades",
+      "Hydrate well before foundation for a seamless finish",
+      "Use a tinted or deep setting powder, not translucent white"
+    ],
+    "avoid": ["Ashy grey-toned contour", "Chalky nude lipsticks", "Foundations that oxidise orange after two hours"]
+  },
+  "tan-warm": {
+    "label": "Tan, warm undertone",
+    "foundation": "Golden, caramel, or honey bases. Avoid red-heavy or cool foundations.",
+    "shadeRange": "Monk 6-7",
+    "correctors": "Deep orange corrector for dark circles. Never use peach on this depth.",
+    "blush": ["Burnt orange", "Warm coral", "Golden brown"],
+    "lips": ["Terracotta", "Warm red", "Caramel nude", "Brick"],
+    "highlighter": ["Rich gold", "Copper", "Bronze"],
+    "techniques": [
+      "Warm-toned smoky eyes look stunning on your skin",
+      "Test foundation in natural light; indoor light hides orange oxidation",
+      "A dewy finish suits warm skin better than full matte"
+    ],
+    "avoid": ["Cool pink products", "Ashy nude lip colours", "White-based setting powder"]
+  },
+  "tan-olive": {
+    "label": "Tan, olive undertone",
+    "foundation": "Olive or warm-neutral bases. Standard golden shades may look too yellow.",
+    "shadeRange": "Monk 6-7",
+    "correctors": "Deep orange corrector for circles. Mix an olive adjuster if foundation clashes.",
+    "blush": ["Terracotta", "Burnt sienna", "Warm berry"],
+    "lips": ["Brown-red", "Warm nude", "Terracotta", "Deep dusty rose"],
+    "highlighter": ["Bronze", "Copper", "Warm gold"],
+    "techniques": [
+      "Olive mixers are your best friend for perfecting the base",
+      "Earthy, warm-neutral contour shades define without ashiness",
+      "Warm metallics on the eyes complement your natural olive tones"
+    ],
+    "avoid": ["Pink-based foundations", "Cool-toned blushes", "Pastel or grey-toned lip shades"]
+  },
+  "deep-cool": {
+    "label": "Deep, cool undertone",
+    "foundation": "Look for shades with red-brown or blue-based undertones. Avoid golden or orange bases.",
+    "shadeRange": "Monk 8-10",
+    "correctors": "Deep red or burgundy corrector for dark circles. Never use peach or light orange.",
+    "blush": ["Deep berry", "Plum", "Rich magenta"],
+    "lips": ["Wine", "Deep plum", "Rich berry", "Cool red"],
+    "highlighter": ["Rose gold", "Pink bronze", "Cool silver"],
+    "techniques": [
+      "Test shades on jawline AND neck in natural light",
+      "Use a deep translucent or tinted setting powder only",
+      "Skip flash-heavy SPF products; do a flash test at the trial"
+    ],
+    "avoid": ["Golden-orange foundations", "Chalky nude lipstick", "White or grey setting powder"]
+  },
+  "deep-neutral": {
+    "label": "Deep, neutral undertone",
+    "foundation": "Rich neutral shades that balance red and gold. Avoid extremes of warm or cool.",
+    "shadeRange": "Monk 8-10",
+    "correctors": "Deep orange or red-orange corrector. Layer with a full-coverage neutral concealer.",
+    "blush": ["Deep rose", "Warm plum", "Rich berry"],
+    "lips": ["Deep nude", "Rich berry", "Wine", "Warm brown"],
+    "highlighter": ["Rich gold", "Rose gold", "Bronze"],
+    "techniques": [
+      "Neutral deep skin can carry both warm and cool eye looks",
+      "Use cream-to-powder products for a natural, skin-like finish",
+      "Test in daylight and under flash for photo-ready confidence"
+    ],
+    "avoid": ["Ashy grey contour", "Chalky highlighters", "Foundations that oxidise to orange"]
+  },
+  "deep-warm": {
+    "label": "Deep, warm undertone",
+    "foundation": "Look for shades with golden-red or mahogany bases. Avoid grey-toned or white-based shades.",
+    "shadeRange": "Monk 8-9",
+    "correctors": "Orange or deep-red corrector for dark circles. Never use peach on deep skin.",
+    "blush": ["Berry", "Burnt orange", "Deep coral"],
+    "lips": ["Wine", "Brick red", "Rich plum", "Warm terracotta"],
+    "highlighter": ["Bronze", "Copper", "Rich gold"],
+    "techniques": [
+      "Test shades on jawline AND neck in natural light",
+      "Do not use setting powder with white or grey cast; use a deep translucent or tinted one",
+      "Skip flash-heavy SPF products for photos; do a flash test at the trial"
+    ],
+    "avoid": ["Lightening the whole face", "Heavy white-based powder", "Chalky nude lipstick"]
+  },
+  "deep-olive": {
+    "label": "Deep, olive undertone",
+    "foundation": "Warm-olive or golden-green undertoned bases. Most deep shades lean too red or too golden.",
+    "shadeRange": "Monk 8-10",
+    "correctors": "Deep orange corrector for circles. Use an olive adjuster if foundation clashes.",
+    "blush": ["Deep terracotta", "Warm berry", "Burnt sienna"],
+    "lips": ["Deep brown-red", "Warm wine", "Rich terracotta", "Warm plum"],
+    "highlighter": ["Deep bronze", "Copper", "Rich warm gold"],
+    "techniques": [
+      "Olive adjusters are essential; most deep foundations lack olive bases",
+      "Earth-toned smoky eyes harmonise with deep olive skin beautifully",
+      "Use a tinted setting powder that matches your depth"
+    ],
+    "avoid": ["Red-heavy foundations without olive balance", "Cool-toned everything", "Ashy powders and highlights"]
+  }
+}
