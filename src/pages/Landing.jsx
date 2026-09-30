@@ -14,7 +14,7 @@ export default function Landing() {
       {/* ── Navbar ── */}
       <nav className="container-app flex items-center justify-between py-4">
         <h1 className="text-xl font-bold text-plum" style={{ fontFamily: 'var(--font-heading)' }}>
-          HueMatch
+          SkinSync
         </h1>
         <div className="flex items-center gap-3">
           <Button variant="ghost" onClick={() => navigate('/artists')}>
@@ -118,7 +118,7 @@ export default function Landing() {
       {/* ── Footer ── */}
       <footer className="border-t border-sand py-8">
         <div className="container-app text-center text-xs text-cocoa space-y-2">
-          <p>HueMatch Bridal © {new Date().getFullYear()}</p>
+          <p>SkinSync © {new Date().getFullYear()}</p>
           <p>
             Skin tone reference:{' '}
             <a href="https://skintone.google" target="_blank" rel="noopener noreferrer" className="underline hover:text-plum">

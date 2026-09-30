@@ -1,5 +1,5 @@
 /**
- * Color science utilities for HueMatch Bridal.
+ * Color science utilities for SkinSync.
  * Converts sRGB to CIELAB and computes derived skin metrics.
  *
  * Reference white: D65 illuminant.

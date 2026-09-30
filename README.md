@@ -1,8 +1,8 @@
-# 🎨 HueMatch Bridal
+# 🎨 SkinSync
 
 > *"Your skin. Your wedding. Enhanced, not erased."*
 
-HueMatch Bridal is a mobile-first web application designed to empower brides — especially those with deep, warm, and olive complexions across diverse Indian skin tones — with an objective, affirming **Complexion Brief** to share with their wedding makeup artists.
+SkinSync is a mobile-first web application designed to empower brides — especially those with deep, warm, and olive complexions across diverse Indian skin tones — with an objective, affirming **Complexion Brief** to share with their wedding makeup artists.
 
 ---
 
@@ -44,8 +44,8 @@ HueMatch Bridal is a mobile-first web application designed to empower brides —
 
 ### 2. Installation
 ```bash
-git clone <repo-url>
-cd huematch
+git clone https://github.com/chirxgsoni/skinsync.git
+cd skinsync
 npm install
 ```
 
@@ -54,7 +54,7 @@ npm install
    - Go to **SQL Editor** and execute [`supabase/schema.sql`](supabase/schema.sql).
    - Execute [`supabase/seed.sql`](supabase/seed.sql) to populate 10 demo artists across Indian cities.
    - Go to **Storage** and create a public bucket named `portfolios`.
-2. Create `.env.local` in the `huematch` folder:
+2. Create `.env.local` in the project root:
    ```env
    VITE_SUPABASE_URL=https://YOUR_PROJECT_ID.supabase.co
    VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY

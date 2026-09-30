@@ -1,6 +1,6 @@
-# 🚀 HueMatch Bridal — Deployment Guide (Vercel & Render)
+# 🚀 SkinSync — Deployment Guide (Vercel & Render)
 
-This guide walks you through deploying **HueMatch Bridal** to **Vercel** and **Render** with complete Single Page Application (SPA) routing, environment variable configuration, and Supabase integration.
+This guide walks you through deploying **SkinSync** to **Vercel** and **Render** with complete Single Page Application (SPA) routing, environment variable configuration, and Supabase integration.
 
 ---
 
@@ -22,22 +22,19 @@ Regardless of whether you choose Vercel or Render, you must configure these two 
 Vercel provides edge hosting, automatic HTTPS, and instant preview deployments for every Git commit.
 
 ### Method A: Via Vercel Web Dashboard (Simplest)
-1. Push your code to a GitHub repository:
+1. Push your code to your GitHub repository:
    ```bash
-   git init
    git add .
-   git commit -m "Deploy HueMatch Bridal"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/huematch.git
-   git push -u origin main
+   git commit -m "Deploy SkinSync"
+   git push origin main
    ```
 2. Log into [vercel.com](https://vercel.com) and click **"Add New..." ➔ "Project"**.
-3. Select your GitHub repository.
+3. Under **"Import Git Repository"**, select `chirxgsoni/skinsync`.
 4. **Configure Project:**
-   - **Framework Preset:** Vite
-   - **Root Directory:** If your repository has `huematch` as a subfolder, click **Edit** and choose `huematch`. If the repo root is already `huematch`, leave it as `./`.
-   - **Build Command:** `npm run build` (automatic)
-   - **Output Directory:** `dist` (automatic)
+   - **Framework Preset:** Vite (auto-detected)
+   - **Root Directory:** `./`
+   - **Build Command:** `npm run build` (auto-detected)
+   - **Output Directory:** `dist` (auto-detected)
 5. **Environment Variables:**
    - Add `VITE_SUPABASE_URL` with your Supabase URL.
    - Add `VITE_SUPABASE_ANON_KEY` with your anon key.
@@ -50,8 +47,7 @@ Vercel provides edge hosting, automatic HTTPS, and instant preview deployments f
 # Install Vercel CLI globally
 npm i -g vercel
 
-# From the huematch directory
-cd huematch
+# From the skinsync directory
 vercel
 
 # Deploy to production
@@ -67,10 +63,10 @@ Render supports both **Static Sites** (100% free) and **Web Services** (Node.js)
 ### Method A: Render Static Site (Recommended — 100% Free)
 
 1. Log into [render.com](https://render.com) and click **"New +" ➔ "Static Site"**.
-2. Connect your Git repository.
+2. Connect your Git repository (`chirxgsoni/skinsync`).
 3. **Configure Settings:**
-   - **Name:** `huematch-bridal`
-   - **Root Directory:** `huematch` (or `./` if `huematch` is the root of your repo)
+   - **Name:** `skinsync`
+   - **Root Directory:** `./`
    - **Build Command:** `npm install && npm run build`
    - **Publish Directory:** `dist`
 4. **Redirects/Rewrites (Critical for React Router):**
@@ -102,18 +98,18 @@ If you prefer or require a Render Web Service container:
 
 ## 🔒 Post-Deployment Supabase Configuration
 
-Once your app is deployed and you have your live URL (e.g., `https://huematch.vercel.app` or `https://huematch.onrender.com`):
+Once your app is deployed and you have your live URL (e.g., `https://skinsync.vercel.app` or `https://skinsync.onrender.com`):
 
 1. Go to your **Supabase Dashboard**.
 2. Navigate to **Authentication ➔ URL Configuration**.
 3. In **Site URL**, enter your production URL:
    ```
-   https://huematch.vercel.app
+   https://skinsync.vercel.app
    ```
 4. In **Redirect URLs**, add:
    ```
-   https://huematch.vercel.app/**
-   https://huematch.onrender.com/**
+   https://skinsync.vercel.app/**
+   https://skinsync.onrender.com/**
    http://localhost:5173/**
    ```
 5. Click **Save**.

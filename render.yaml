@@ -1,10 +1,10 @@
-# Render Blueprint for HueMatch Bridal
+# Render Blueprint for SkinSync
 # Docs: https://render.com/docs/blueprint-spec
 
 services:
   # Static Site Deployment (Recommended for Render — 100% free)
   - type: web
-    name: huematch-bridal
+    name: skinsync
     runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist

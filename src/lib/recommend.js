@@ -1,5 +1,5 @@
 /**
- * Recommendation engine for HueMatch Bridal.
+ * Recommendation engine for SkinSync.
  * Deterministic lookup — no runtime AI calls.
  */
 

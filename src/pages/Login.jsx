@@ -49,7 +49,7 @@ export default function Login() {
       <div className="flex-1 flex items-center justify-center px-4 pb-16">
         <div className="w-full max-w-sm">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-espresso mb-2">Welcome to HueMatch</h1>
+            <h1 className="text-2xl font-bold text-espresso mb-2">Welcome to SkinSync</h1>
             <p className="text-cocoa text-sm">Sign in to save your Complexion Brief and contact artists.</p>
           </div>
 

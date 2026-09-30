@@ -1,4 +1,4 @@
-# Technical Requirements Document (TRD): HueMatch Bridal
+# Technical Requirements Document (TRD): SkinSync
 
 | | |
 |---|---|

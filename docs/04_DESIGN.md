@@ -1,4 +1,4 @@
-# Website Design Document: HueMatch Bridal
+# Website Design Document: SkinSync
 
 Design principle: **celebrate, never correct.** Every visual and word choice should make a bride feel beautiful in her own skin. Mobile-first, since most users will scan on a phone.
 
@@ -8,7 +8,7 @@ Design principle: **celebrate, never correct.** Every visual and word choice sho
 
 | | |
 |---|---|
-| **Name** | HueMatch Bridal |
+| **Name** | SkinSync |
 | **Tagline** | Your skin. Your wedding. Enhanced, not erased. |
 | **Voice** | Warm, confident, affirming. Like a friend who is also an expert. |
 | **Never say** | "fix", "lighten", "brighten your tone", "flawless", "dark skin problem" |

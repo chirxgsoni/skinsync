@@ -1,4 +1,4 @@
--- HueMatch Bridal: Seed Data — 10 Demo Artists
+-- SkinSync: Seed Data — 10 Demo Artists
 -- Run this AFTER schema.sql in the Supabase SQL Editor
 -- All artists are pre-approved for the hackathon demo
 

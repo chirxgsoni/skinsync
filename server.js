@@ -86,5 +86,5 @@ function serveFile(filePath, res) {
 }
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`HueMatch production server listening on http://0.0.0.0:${PORT}`)
+  console.log(`SkinSync production server listening on http://0.0.0.0:${PORT}`)
 })

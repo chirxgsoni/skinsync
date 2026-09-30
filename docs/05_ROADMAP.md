@@ -1,4 +1,4 @@
-# Roadmap: HueMatch Bridal
+# Roadmap: SkinSync
 
 All phases are designed to run on **free tools and free tiers**. Timelines are estimates for a small team (3-4 people) and should be adjusted after each phase.
 

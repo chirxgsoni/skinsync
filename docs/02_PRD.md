@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD): HueMatch Bridal
+# Product Requirements Document (PRD): SkinSync
 
 | | |
 |---|---|

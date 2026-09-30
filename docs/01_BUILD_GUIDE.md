@@ -1,4 +1,4 @@
-# HueMatch Bridal: Build Guide (React + Supabase, 100% free stack)
+# SkinSync: Build Guide (React + Supabase, 100% free stack)
 
 > *"Your skin. Your wedding. Enhanced, not erased."*
 
@@ -38,8 +38,8 @@ This guide walks you from an empty folder to a deployed MVP. Every tool below ha
 ## 3. Project Setup
 
 ```bash
-npm create vite@latest huematch -- --template react
-cd huematch
+npm create vite@latest skinsync -- --template react
+cd skinsync
 npm install
 npm install @supabase/supabase-js react-router-dom @mediapipe/tasks-vision lucide-react jspdf
 npm install -D tailwindcss @tailwindcss/vite
@@ -319,7 +319,7 @@ Keys are `{depthGroup}-{undertone}`. Groups: `fair` (1-3), `light-medium` (4-5),
 ### Step 9: Deploy (Hour 34-38)
 
 ```bash
-git init && git add . && git commit -m "HueMatch MVP"
+git init && git add . && git commit -m "SkinSync MVP"
 # push to GitHub, then import the repo in Vercel
 # add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel > Settings > Environment Variables
 ```

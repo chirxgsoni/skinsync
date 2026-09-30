@@ -1,5 +1,5 @@
 /**
- * Skin depth and undertone classification for HueMatch Bridal.
+ * Skin depth and undertone classification for SkinSync.
  *
  * Depth: nearest-neighbour in CIELAB against the 10 Monk Skin Tone swatches.
  * Undertone: hue-angle thresholds (MUST be calibrated with diverse test photos).
