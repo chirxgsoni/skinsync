@@ -1,0 +1,102 @@
+[
+  {
+    "id": "demo-1",
+    "display_name": "Priya Sharma",
+    "bio": "Specialising in bridal looks that celebrate your natural glow. Deep and warm tone expert.",
+    "city": "Mumbai",
+    "monk_expertise": [6, 7, 8, 9, 10],
+    "years_experience": 12,
+    "instagram": "priyamakeup",
+    "approved": true
+  },
+  {
+    "id": "demo-2",
+    "display_name": "Ananya Reddy",
+    "bio": "South Indian bridal specialist with a passion for rich, radiant finishes on every skin tone.",
+    "city": "Chennai",
+    "monk_expertise": [5, 6, 7, 8, 9],
+    "years_experience": 8,
+    "instagram": "ananyabeauty",
+    "approved": true
+  },
+  {
+    "id": "demo-3",
+    "display_name": "Fatima Khan",
+    "bio": "Nikah and reception looks. I work with your skin, not against it.",
+    "city": "Hyderabad",
+    "monk_expertise": [4, 5, 6, 7, 8],
+    "years_experience": 10,
+    "instagram": "fatimakhan_mua",
+    "approved": true
+  },
+  {
+    "id": "demo-4",
+    "display_name": "Deepika Nair",
+    "bio": "Kerala bridal traditions with a modern twist. Every bride deserves her own shade.",
+    "city": "Kochi",
+    "monk_expertise": [7, 8, 9, 10],
+    "years_experience": 6,
+    "instagram": "deepikanair_beauty",
+    "approved": true
+  },
+  {
+    "id": "demo-5",
+    "display_name": "Sonal Patel",
+    "bio": "Gujarati and Rajasthani bridal expert. Warm-toned skin is my specialty.",
+    "city": "Ahmedabad",
+    "monk_expertise": [3, 4, 5, 6, 7],
+    "years_experience": 9,
+    "instagram": "sonalbridal",
+    "approved": true
+  },
+  {
+    "id": "demo-6",
+    "display_name": "Meghna Das",
+    "bio": "Bengali bridal artistry with a focus on dewy, luminous skin for every complexion.",
+    "city": "Kolkata",
+    "monk_expertise": [4, 5, 6, 7, 8],
+    "years_experience": 7,
+    "instagram": "meghnamakeup",
+    "approved": true
+  },
+  {
+    "id": "demo-7",
+    "display_name": "Ritu Verma",
+    "bio": "Destination wedding specialist. Trained in inclusive shade matching across the Monk scale.",
+    "city": "Delhi",
+    "monk_expertise": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "years_experience": 15,
+    "instagram": "rituverma_bridal",
+    "approved": true
+  },
+  {
+    "id": "demo-8",
+    "display_name": "Zara Sheikh",
+    "bio": "Minimalist bridal beauty. Olive and cool undertone expertise.",
+    "city": "Pune",
+    "monk_expertise": [3, 4, 5, 6],
+    "years_experience": 5,
+    "instagram": "zarasheikh_mua",
+    "approved": true
+  },
+  {
+    "id": "demo-9",
+    "display_name": "Kavitha Sundaram",
+    "bio": "Deep skin specialist. Your richness is your power — I just enhance it.",
+    "city": "Bangalore",
+    "monk_expertise": [8, 9, 10],
+    "years_experience": 11,
+    "instagram": "kavitha_bridal",
+    "approved": true
+  },
+  {
+    "id": "demo-10",
+    "display_name": "Nisha Thakur",
+    "bio": "Fair to medium skin expert with a focus on cool and neutral undertones.",
+    "city": "Jaipur",
+    "monk_expertise": [1, 2, 3, 4, 5],
+    "years_experience": 4,
+    "instagram": "nishathakur_mua",
+    "approved": true
+  }
+]

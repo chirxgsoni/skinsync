@@ -2,11 +2,11 @@
  * Complexion Brief page — the core deliverable.
  * Foundation guidance, palette swatches, technique tips, avoid list, trial checklist.
  */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, Download, Eye, Save, Printer, Users } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import BriefView from '../components/BriefView'
 import Button from '../components/Button'
 import Toast from '../components/Toast'
@@ -31,6 +31,14 @@ export default function Brief() {
   if (!data || !data.recommendation) return null
 
   const handleSave = async () => {
+    if (!isSupabaseConfigured) {
+      setToast({
+        message: 'Cloud sync requires Supabase configuration. You can download your PDF brief directly below!',
+        type: 'info',
+      })
+      return
+    }
+
     if (!user) {
       setToast({
         message: 'Please sign in to save your brief to your profile.',
@@ -41,21 +49,24 @@ export default function Brief() {
     }
 
     setSaving(true)
-    const { error } = await supabase.from('briefs').insert({
-      user_id: user.id,
-      monk_level: data.monkLevel,
-      monk_alt: data.monkAlt,
-      undertone: data.undertone,
-      lab: data.lab,
-      rule_key: data.ruleKey,
-    })
+    try {
+      const { error } = await supabase.from('briefs').insert({
+        user_id: user.id,
+        monk_level: data.monkLevel,
+        monk_alt: data.monkAlt,
+        undertone: data.undertone,
+        lab: data.lab,
+        rule_key: data.ruleKey,
+      })
 
-    setSaving(false)
-    if (error) {
-      setToast({ message: 'Could not save brief. Please try again.', type: 'error' })
-    } else {
+      if (error) throw error
       setSaved(true)
       setToast({ message: 'Complexion Brief saved to your profile!', type: 'success' })
+    } catch (err) {
+      console.error('Error saving brief:', err)
+      setToast({ message: 'Could not save brief. Please try again.', type: 'error' })
+    } finally {
+      setSaving(false)
     }
   }
 

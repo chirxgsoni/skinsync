@@ -4,7 +4,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { ArrowLeft, Search, Users, X } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import demoArtists from '../data/demoArtists.json'
 import ArtistCard from '../components/ArtistCard'
 import { SwatchRow } from '../components/SkinSwatch'
 import { SkeletonCard } from '../components/SkeletonLoader'
@@ -21,20 +22,47 @@ export default function Artists() {
 
   const fetchArtists = async () => {
     setLoading(true)
-    let query = supabase.from('artists').select('*').eq('approved', true)
 
-    if (city.trim()) {
-      query = query.ilike('city', `%${city.trim()}%`)
+    const filterLocal = () => {
+      let list = [...demoArtists]
+      if (city.trim()) {
+        list = list.filter((a) => a.city.toLowerCase().includes(city.trim().toLowerCase()))
+      }
+      if (selectedLevels.length > 0) {
+        list = list.filter((a) => selectedLevels.some((lvl) => a.monk_expertise?.includes(lvl)))
+      }
+      list.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0))
+      return list
     }
 
-    if (selectedLevels.length > 0) {
-      query = query.contains('monk_expertise', selectedLevels)
+    if (!isSupabaseConfigured) {
+      setArtists(filterLocal())
+      setLoading(false)
+      return
     }
 
-    query = query.order('years_experience', { ascending: false })
+    try {
+      let query = supabase.from('artists').select('*').eq('approved', true)
 
-    const { data, error } = await query
-    if (!error) setArtists(data || [])
+      if (city.trim()) {
+        query = query.ilike('city', `%${city.trim()}%`)
+      }
+
+      if (selectedLevels.length > 0) {
+        query = query.contains('monk_expertise', selectedLevels)
+      }
+
+      query = query.order('years_experience', { ascending: false })
+
+      const { data, error } = await query
+      if (!error && data && data.length > 0) {
+        setArtists(data)
+      } else {
+        setArtists(filterLocal())
+      }
+    } catch {
+      setArtists(filterLocal())
+    }
     setLoading(false)
   }
 

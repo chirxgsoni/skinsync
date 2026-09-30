@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, Upload, Trash2, CheckCircle, Clock } from 'lucide-react'
 import { useAuth } from '../hooks/useAuth'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import { SkinSwatch } from '../components/SkinSwatch'
 import Button from '../components/Button'
 
 export default function ArtistDashboard() {
-  const { user } = useAuth()
+  const { user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
 
   const [artist, setArtist] = useState(null)
@@ -32,38 +32,52 @@ export default function ArtistDashboard() {
   const [uploadLevel, setUploadLevel] = useState(5)
 
   const loadData = async () => {
+    if (!isSupabaseConfigured || !user) {
+      setLoading(false)
+      return
+    }
     setLoading(true)
 
-    const { data: artistData } = await supabase
-      .from('artists')
-      .select('*')
-      .eq('user_id', user.id)
-      .single()
-
-    if (artistData) {
-      setArtist(artistData)
-      setDisplayName(artistData.display_name || '')
-      setBio(artistData.bio || '')
-      setCity(artistData.city || '')
-      setYearsExp(artistData.years_experience?.toString() || '')
-      setInstagram(artistData.instagram || '')
-      setExpertise(artistData.monk_expertise || [])
-
-      const { data: portfolioData } = await supabase
-        .from('portfolio_items')
+    try {
+      const { data: artistData } = await supabase
+        .from('artists')
         .select('*')
-        .eq('artist_id', artistData.id)
-        .order('created_at', { ascending: false })
+        .eq('user_id', user.id)
+        .single()
 
-      if (portfolioData) setPortfolio(portfolioData)
+      if (artistData) {
+        setArtist(artistData)
+        setDisplayName(artistData.display_name || '')
+        setBio(artistData.bio || '')
+        setCity(artistData.city || '')
+        setYearsExp(artistData.years_experience?.toString() || '')
+        setInstagram(artistData.instagram || '')
+        setExpertise(artistData.monk_expertise || [])
+
+        const { data: portfolioData } = await supabase
+          .from('portfolio_items')
+          .select('*')
+          .eq('artist_id', artistData.id)
+          .order('created_at', { ascending: false })
+
+        if (portfolioData) setPortfolio(portfolioData)
+      }
+    } catch (err) {
+      console.warn('Failed to load artist data:', err)
+    } finally {
+      setLoading(false)
     }
-
-    setLoading(false)
   }
 
   useEffect(() => {
-    if (user) loadData()
-  }, [user])
+    if (!authLoading) {
+      if (!user) {
+        navigate('/login', { replace: true })
+      } else {
+        loadData()
+      }
+    }
+  }, [user, authLoading, navigate])
 
   const handleSaveProfile = async () => {
     setSaving(true)

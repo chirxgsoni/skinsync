@@ -4,7 +4,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Mail, ArrowLeft } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import Button from '../components/Button'
 
 export default function Login() {
@@ -19,16 +19,27 @@ export default function Login() {
     setError('')
     setLoading(true)
 
-    const { error: authError } = await supabase.auth.signInWithOtp({
-      email,
-      options: { emailRedirectTo: window.location.origin + '/scan' },
-    })
+    if (!isSupabaseConfigured) {
+      setError('Cloud authentication requires Supabase environment variables in Vercel. You can continue as guest below to use all skin scan and complexion features!')
+      setLoading(false)
+      return
+    }
 
-    setLoading(false)
-    if (authError) {
-      setError(authError.message)
-    } else {
-      setSent(true)
+    try {
+      const { error: authError } = await supabase.auth.signInWithOtp({
+        email,
+        options: { emailRedirectTo: window.location.origin + '/scan' },
+      })
+
+      if (authError) {
+        setError(authError.message)
+      } else {
+        setSent(true)
+      }
+    } catch (err) {
+      setError('Unable to send magic link. Please try again.')
+    } finally {
+      setLoading(false)
     }
   }
 

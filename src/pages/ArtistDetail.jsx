@@ -4,7 +4,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, MapPin, Calendar, ExternalLink, Image as ImageIcon } from 'lucide-react'
-import { supabase } from '../lib/supabase'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import demoArtists from '../data/demoArtists.json'
 import { SkinSwatch } from '../components/SkinSwatch'
 import { SkeletonText } from '../components/SkeletonLoader'
 import Button from '../components/Button'
@@ -20,13 +21,31 @@ export default function ArtistDetail() {
   const loadArtist = async () => {
     setLoading(true)
 
-    const [artistRes, portfolioRes] = await Promise.all([
-      supabase.from('artists').select('*').eq('id', id).single(),
-      supabase.from('portfolio_items').select('*').eq('artist_id', id).order('created_at', { ascending: false }),
-    ])
+    if (!isSupabaseConfigured) {
+      const found = demoArtists.find((a) => a.id === id) || null
+      setArtist(found)
+      setPortfolio([])
+      setLoading(false)
+      return
+    }
 
-    if (artistRes.data) setArtist(artistRes.data)
-    if (portfolioRes.data) setPortfolio(portfolioRes.data)
+    try {
+      const [artistRes, portfolioRes] = await Promise.all([
+        supabase.from('artists').select('*').eq('id', id).single(),
+        supabase.from('portfolio_items').select('*').eq('artist_id', id).order('created_at', { ascending: false }),
+      ])
+
+      if (artistRes.data) {
+        setArtist(artistRes.data)
+      } else {
+        const found = demoArtists.find((a) => a.id === id) || null
+        setArtist(found)
+      }
+      if (portfolioRes.data) setPortfolio(portfolioRes.data)
+    } catch {
+      const found = demoArtists.find((a) => a.id === id) || null
+      setArtist(found)
+    }
     setLoading(false)
   }
 

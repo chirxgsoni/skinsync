@@ -9,10 +9,12 @@ import Artists from './pages/Artists'
 import ArtistDetail from './pages/ArtistDetail'
 import ArtistDashboard from './pages/ArtistDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
+import ErrorBoundary from './components/ErrorBoundary'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -32,5 +34,6 @@ export default function App() {
         />
       </Routes>
     </BrowserRouter>
-  )
+  </ErrorBoundary>
+)
 }
